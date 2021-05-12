@@ -2,6 +2,7 @@
 
 *{
     box-sizing: border-box;
+    font-size: 100%;
 }
 
 body{
@@ -15,10 +16,15 @@ body{
     margin: 0;
 }
 
+h1{
+    color: #fff;
+    font-size: 3rem;
+}
+
 
 .screen{
     cursor: pointer;
-    width: 50%;
+    width: 60%;
     background-color: #000 !important;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
@@ -29,7 +35,7 @@ body{
     color: #fff;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    width: 50%;
+    width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +45,11 @@ body{
 .controls .btn{
     border: 0;
     background: transparent;
-    cursor pointer;
+    cursor: pointer;
+}
+
+.btn:focus{
+    outline: 1px dashed #99e7ab;
 }
 
 .controls .fa-play {
