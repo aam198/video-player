@@ -47,8 +47,9 @@ h1{
     cursor: pointer;
     width: 60%;
     background-color: #000 !important;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    
 }
 
 
@@ -85,11 +86,18 @@ h1{
 
 .controls .fa-play:hover {
     transform: scale(1.1);
+    color: rgba(52, 206, 87, 0.9);
 }
 
-.controls .fa-stop {
-    color: #dc3545;
+.controls .fa-redo {
+    color: rgba(255,255,255,0.5);
     font-size: var(--icon-size);
+    transition: all .2s ease-in-out;
+}
+
+.controls .fa-redo:hover {
+    color: rgba(255,255,255,0.9);
+    transform: scale(1.1);
 }
 
 .controls .fa-pause {
