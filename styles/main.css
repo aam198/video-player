@@ -22,13 +22,31 @@ h1{
 }
 
 
+/* Container */
+
+.video-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-wrapper svg{
+    height: 50px;
+    width: 50px;
+    padding: 10px 10px;
+}
+
 .screen{
     cursor: pointer;
     width: 60%;
     background-color: #000 !important;
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
+    padding: 15px 15px;
 }
+
+
 
 .controls {
     background: #292929;
@@ -75,3 +93,4 @@ h1{
         width: 90%;
     }
 }
+
