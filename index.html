@@ -11,12 +11,13 @@
 
 </head>
 <body>
+<div class="wrapper"> 
     <h1>Custom Video Player</h1>
-  
 <div class="video-wrapper">
+    <div class="video-player aspect-ratio-box">
     <video src="assets/mask_door.mp4" 
             id="video" 
-            class="screen video-js video-js-lut" 
+            class="aspect-ratio-inside screen video-js video-js-lut" 
             poster="assets/play1.svg"></video>
 
     <div class="controls">
@@ -33,7 +34,8 @@
         <button class ="btn" id="closedCaption"><i class="fas fa-closed-captioning"></i></button>
     </div>
 </div>
-
+</div>
+</div>
 
     <script src="src/script.js"></script>
 </body>

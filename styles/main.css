@@ -13,13 +13,8 @@
 
 body{
     font-family: 'Questrial', sans-serif;
-    background-color: #666;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-height: 100vh;
-    margin: 0;
+    background-color: var(--main-clr);
+    height: 100vh;
 }
 
 h1{
@@ -30,43 +25,66 @@ h1{
 
 /* Container */
 
-.video-wrapper{
+.wrapper{
+    width: 100%;
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.video-wrapper svg{
-    height: 50px;
-    width: 50px;
-    padding: 10px 10px;
+.video-wrapper{
+    display: flex;
+    justify-content: center;
+    font-size: 1.2em;
+}
+
+/* Aspect Ratio */
+video {
+    width: 100%;
+    aspect-ratio: 16/9;
+    height: auto;
+    max-width: 60rem;
+}
+.video-player{
+    min-width: 560px;
+    position: relative;
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    overflow: hidden;
+    box-shadow:0 2.5em 2.5em -1.875em rgba(0, 0, 0, 0.5), 0 1.25em 5em 1em rgba(0, 0, 0, 0.2);
 }
 
 .screen{
     cursor: pointer;
-    width: 60%;
-    background-color: #000 !important;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    
+    width: 100%;
+    display: inline-block;
+    background-color: #404040; !important;
 }
-
 
 
 /* Controls styling */
 
 .controls {
     background: rgba(41, 41,41, 0.85);
-    
     color: rgba(255,255,255,0.8);
-    border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px;
-    width: 60%;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
+    z-index: 2;
+    transition: all 0.3s ease-in-out;
+}
+
+.video-wrapper:hover .controls{
+    opacity: 1;
+    transform: translate(0,0);
 }
 
 .controls .btn{
@@ -129,11 +147,15 @@ h1{
     transform: scale(1.1);
 }
 
-@media(max-width: 800px) {
-    .screen, .controls{
-        width: 90%;
+
+@media(min-width: 800px){
+    .controls{
+        opacity: 0;
+        transform: translate(0, 100%);
+        padding: 20px;
     }
 }
+
 
 /* Progress Bar */
 
