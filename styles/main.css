@@ -3,11 +3,31 @@
 
 :root {
     --main-clr: #91b3b9;
+    --black: hsl(0, 0%, 10%);
     --icon-size: 24px;
+
+    /* Box Shadows */
+    --level-1: 0 1px 3px rgba(0, 0, 0, 0.12),0 1px 2px rgba(0, 0, 0, 0.24);
+    --level-2: 0 3px 6px rgba(0, 0, 0, 0.16),0 3px 6px rgba(0, 0, 0, 0.23);
+    --level-3: 0 10px 20px rgba(0, 0, 0, 0.1),0 6px 6px rgba(0, 0, 0, 0.1);
+    --level-4: 0 14px 28px rgba(0, 0, 0, 0.25),0 10px 10px rgba(0, 0, 0, 0.22);
+    --level-5: 0 19px 38px rgba(0, 0, 0, 0.3),0 15px 12px rgba(0, 0, 0, 0.22);
+
+    --card-Radius: 10px;
+    --cardShadow: var(--level-3);
+
+    --transition: 0.3s cubic-bezier(0.785, 0.135, 0.15, 0.86) all;
+
+    /* Button Styles */
+    --accent: hsl(180, 52%, 68%);
+    --accentHighlight: hsl(180, 52%, 78%);
+    --buttonRadius: 12px;
 }
 
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     font-size: 100%;
 }
 
@@ -32,12 +52,17 @@ h1{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .video-wrapper{
     display: flex;
     justify-content: center;
     font-size: 1.2em;
+    margin-top: 1.5%;
+    margin: 1.5% .5rem 1.5% .5rem;
+    position: relative;
 }
 
 /* Aspect Ratio */
@@ -48,6 +73,9 @@ video {
     max-width: 60rem;
 }
 
+video[poster]{
+    object-fit: cover;
+}
 
 .video-player{
     min-width: 560px;
@@ -93,6 +121,7 @@ video {
     border: 0;
     background: transparent;
     cursor: pointer;
+    margin: 0 10px 0 10px;
 }
 
 .btn:focus{
@@ -209,6 +238,7 @@ input[type='range']::-moz-range-thumb {
 	border-radius: 50%;
 	background: rgba(255,255,255,0.9);
 	cursor: pointer;
+    margin-left: 5px;
 }
 
 
@@ -270,7 +300,11 @@ input[type='range']:focus::-ms-fill-upper {
 .playButton {
     width: 100%;
     text-align: center;
-    margin-top: 10vh;
+    transition: .6s;
+    transform: translate(-0%, -50%);
+    position: absolute;
+    top: 50%;
+    z-index: 10;
   }
 
   .playBtn {
@@ -291,8 +325,8 @@ input[type='range']:focus::-ms-fill-upper {
         -webkit-transition: all 0.7s ease-in-out;
         stroke-dasharray: 240;
         stroke-dashoffset: 480;
-        stroke: #000;
-        transform: translateY(0) 
+        stroke: hsl(0, 0%, 94%);
+        transform: translateY(0); 
        }
 
 .playBtn:hover .triangle{
@@ -324,4 +358,41 @@ input[type='range']:focus::-ms-fill-upper {
     100% {
       transform: translateX(0)
     }
+}
+
+/* Nice highlight to a button */
+
+.button-container{
+    height: 25vh;
+    background-color: white;
+    padding: 1%;
+}
+
+.more-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1.5%;
+}
+.nextBtn {
+	--buttonColor: var(--accent);
+	--buttonHighlight: var(--accentHighlight);
+	border-top: solid 2px var(--buttonHighlight);
+	background: var(--buttonColor);
+	text-align: center;
+	color: var(--black);
+	font-weight: bold;
+	border-radius: var(--buttonRadius);
+	box-shadow: var(--level-1);
+	font-size: 1.5rem;
+	padding: 8px 40px;
+	transition: background 0.3s ease 0s, box-shadow 0s ease 0s, transform 0s ease 0s;
+    cursor: pointer;
+}
+
+.nextBtn:hover {
+	background: var(--buttonHighlight);
+	box-shadow: var(--level-2);
+	transform: translate3d(0px, -1px, 0px);
 }
