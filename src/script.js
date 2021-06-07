@@ -11,7 +11,7 @@ const timestamp = document.getElementById('timestamp');
 function toggleVideoStatus () {
     if (video.paused){
         video.play();
-        
+        overlayPlay.classList.add('hidden');
     }
     else {
         video.pause();

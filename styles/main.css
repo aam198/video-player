@@ -298,18 +298,29 @@ input[type='range']:focus::-ms-fill-upper {
 /* Play Button */
 
 .playButton {
-    width: 100%;
     text-align: center;
     transition: .6s;
     transform: translate(-0%, -50%);
     position: absolute;
     top: 50%;
     z-index: 10;
+    cursor: pointer;
   }
 
   .playBtn {
       display: inline-block;
       -webkit-transition: all 0.5s ease;
+      border:0;
+      border-radius: 100%;
+      background: transparent;
+      cursor:pointer;
+      transition: all .6s ease-out;
+      z-index: 2;
+  }
+
+  .hidden{
+      opacity: 0;
+      transform: translate(0,0);
   }
 
   .circle {
