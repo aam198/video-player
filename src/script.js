@@ -36,6 +36,7 @@ function updateProgress () {
     console.log(progress.value);
     if(video.currentTime === video.duration){
         play.innerHTML = '<i class="fas fa-atom"></i>';
+        overlayPlay.classList.remove('hidden');
     }
     //  Timestamp 
 
@@ -67,6 +68,7 @@ function setVideoProgress () {
 function stopVideo () {
     video.currentTime=0;
     video.pause();
+    overlayPlay.classList.remove('hidden');
 }
 
 

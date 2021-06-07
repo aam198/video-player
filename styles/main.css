@@ -99,7 +99,28 @@ video[poster]{
 /* Controls styling */
 
 .controls {
-    background: linear-gradient(transparent,rgba(0,0,0,.75));
+    background:
+        linear-gradient(
+          to top,
+          hsla(0, 0%, 0%, 0.68) 0%,
+          hsla(0, 0%, 0%, 0.655) 14.4%,
+          hsla(0, 0%, 0%, 0.618) 26.8%,
+          hsla(0, 0%, 0%, 0.573) 37.6%,
+          hsla(0, 0%, 0%, 0.52) 46.8%,
+          hsla(0, 0%, 0%, 0.461) 54.6%,
+          hsla(0, 0%, 0%, 0.43) 57%,
+          hsla(0, 0%, 0%, 0.4) 61.3%,
+          hsla(0, 0%, 0%, 0.336) 67%,
+          hsla(0, 0%, 0%, 0.30) 69%,
+          hsla(0, 0%, 0%, 0.273) 71.9%,
+          hsla(0, 0%, 0%, 0.212) 76.2%,
+          hsla(0, 0%, 0%, 0.155) 80.1%,
+          hsla(0, 0%, 0%, 0.104) 83.7%,
+          hsla(0, 0%, 0%, 0.062) 87.4%,
+          hsla(0, 0%, 0%, 0.029) 91.2%,
+          hsla(0, 0%, 0%, 0.007) 95.3%,
+          hsla(0, 0%, 0%, 0) 100%
+        );
     color: rgba(255,255,255,0.8);
     width: 100%;
     box-sizing: border-box;
@@ -112,6 +133,28 @@ video[poster]{
     z-index: 2;
     transition: all 0.3s ease-in-out;
 }
+
+.forNow {
+    linear-gradient(
+      to bottom,
+      hsla(0, 0%, 0%, 0) 0%,
+      hsla(0, 0%, 0%, 0.016) 17%,
+      hsla(0, 0%, 0%, 0.054) 31.4%,
+      hsla(0, 0%, 0%, 0.111) 43.5%,
+      hsla(0, 0%, 0%, 0.182) 53.5%,
+      hsla(0, 0%, 0%, 0.266) 61.7%,
+      hsla(0, 0%, 0%, 0.358) 68.3%,
+      hsla(0, 0%, 0%, 0.455) 73.6%,
+      hsla(0, 0%, 0%, 0.553) 77.9%,
+      hsla(0, 0%, 0%, 0.649) 81.4%,
+      hsla(0, 0%, 0%, 0.741) 84.3%,
+      hsla(0, 0%, 0%, 0.823) 87%,
+      hsla(0, 0%, 0%, 0.894) 89.6%,
+      hsla(0, 0%, 0%, 0.949) 92.5%,
+      hsla(0, 0%, 0%, 0.986) 95.9%,
+      hsl(0, 0%, 0%) 100%
+    );
+  }
 
 .video-wrapper:hover .controls{
     opacity: 1;
@@ -325,7 +368,7 @@ input[type='range']:focus::-ms-fill-upper {
   }
 
   .circle {
-    stroke: #f8aa28;
+    stroke: #1e407b;
     stroke-dasharray: 650;
     stroke-dashoffset: 650;
     -webkit-transition: all 0.5s ease-in-out;
@@ -343,14 +386,14 @@ input[type='range']:focus::-ms-fill-upper {
 .playBtn:hover .triangle{
         stroke-dashoffset: 0;
         opacity: 1;
-        stroke: #f8aa28;
+        stroke: hsl(0.61, 0.61, 30%);
         animation: nudge 0.7s ease-in-out;
 }
 
 .playBtn:hover .circle{
     stroke-dashoffset: 0;
     opacity: 1;
-    stroke: #f8aa28;
+    stroke: #1e407b;
 }
 
 @keyframes nudge{
