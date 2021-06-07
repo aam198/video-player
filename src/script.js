@@ -1,5 +1,6 @@
 const video = document.getElementById('video');
 const play = document.getElementById('play');
+const overlayPlay = document.getElementById('overlayPlay');
 const stop = document.getElementById('stop');
 const progress = document.getElementById('progress');
 const timestamp = document.getElementById('timestamp');
@@ -10,6 +11,7 @@ const timestamp = document.getElementById('timestamp');
 function toggleVideoStatus () {
     if (video.paused){
         video.play();
+        
     }
     else {
         video.pause();
@@ -75,6 +77,9 @@ video.addEventListener('pause', updatePlayIcon);
 
 video.addEventListener('play', updatePlayIcon);
 video.addEventListener('timeupdate', updateProgress);
+
+overlayPlay.addEventListener('click',toggleVideoStatus);
+overlayPlay.addEventListener('pause', updatePlayIcon);
 
 play.addEventListener('click', toggleVideoStatus);
 
