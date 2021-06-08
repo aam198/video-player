@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Video Player</title>
+
     <link rel="stylesheet" href="styles/progress.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
 </head>
 <body>
@@ -24,11 +27,11 @@
         <div class="controls">
          <button class="btn" id="play" aria-label="Play"
         tabindex="0">
-            <i class="fa fa-play fa-2x"></i>
+            <span class="material-icons m-icon play">&#xe037;</span>
          </button>
 
          <button class="btn" id="stop">
-            <i class="fas fa-redo fa-2x"></i>
+            <span class="material-icons m-icon replay">&#xe042;</span>
          </button>
         
          <input type="range" id="progress" class="progress" min="0" max="100" step="0.1" value="0"/>
@@ -59,7 +62,7 @@
 </div>
 <div class="button-container">
     <div class="more-info">
-        <a class="nextBtn">Go Back</a>
+        <a class="nextBtn">Go Back </a>
     </div>
 </div>
 <!-- Play Button Build/Testing -->

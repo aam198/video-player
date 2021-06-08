@@ -22,10 +22,10 @@ function toggleVideoStatus () {
 
 function updatePlayIcon () {
     if(video.paused){
-        play.innerHTML = '<i class = "fa fa-play fa-2x"></i>';
+        play.innerHTML = '<span class="material-icons m-icon pause">&#xe037;</span>';
     }
     else{
-        play.innerHTML = '<i class = "fa fa-pause fa-2x"></i>';
+        play.innerHTML = '<span class="material-icons m-icon play">&#xe034;</span>';
     }
 }
 
