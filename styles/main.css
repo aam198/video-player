@@ -103,12 +103,15 @@ video[poster]{
         linear-gradient(
           to top,
           hsla(0, 0%, 0%, 0.68) 0%,
+          hsla(0, 0%, 0%, 0.66) 10%,
           hsla(0, 0%, 0%, 0.655) 14.4%,
           hsla(0, 0%, 0%, 0.618) 26.8%,
           hsla(0, 0%, 0%, 0.573) 37.6%,
           hsla(0, 0%, 0%, 0.52) 46.8%,
           hsla(0, 0%, 0%, 0.461) 54.6%,
-          hsla(0, 0%, 0%, 0.43) 57%,
+          hsla(0, 0%, 0%, 0.44) 55.6%,
+          hsla(0, 0%, 0%, 0.42) 56.6%,
+          hsla(0, 0%, 0%, 0.41) 57%,
           hsla(0, 0%, 0%, 0.4) 61.3%,
           hsla(0, 0%, 0%, 0.336) 67%,
           hsla(0, 0%, 0%, 0.30) 69%,
@@ -134,27 +137,6 @@ video[poster]{
     transition: all 0.3s ease-in-out;
 }
 
-.forNow {
-    linear-gradient(
-      to bottom,
-      hsla(0, 0%, 0%, 0) 0%,
-      hsla(0, 0%, 0%, 0.016) 17%,
-      hsla(0, 0%, 0%, 0.054) 31.4%,
-      hsla(0, 0%, 0%, 0.111) 43.5%,
-      hsla(0, 0%, 0%, 0.182) 53.5%,
-      hsla(0, 0%, 0%, 0.266) 61.7%,
-      hsla(0, 0%, 0%, 0.358) 68.3%,
-      hsla(0, 0%, 0%, 0.455) 73.6%,
-      hsla(0, 0%, 0%, 0.553) 77.9%,
-      hsla(0, 0%, 0%, 0.649) 81.4%,
-      hsla(0, 0%, 0%, 0.741) 84.3%,
-      hsla(0, 0%, 0%, 0.823) 87%,
-      hsla(0, 0%, 0%, 0.894) 89.6%,
-      hsla(0, 0%, 0%, 0.949) 92.5%,
-      hsla(0, 0%, 0%, 0.986) 95.9%,
-      hsl(0, 0%, 0%) 100%
-    );
-  }
 
 .video-wrapper:hover .controls{
     opacity: 1;
@@ -227,7 +209,7 @@ video[poster]{
     .controls{
         opacity: 0;
         transform: translate(0, 100%);
-        padding: 20px;
+        padding: 30px 15px 15px 15px;
     }
 }
 
@@ -252,7 +234,6 @@ input[type='range']:focus {
 input[type='range']::-ms-track {
 	width: 100%;
 	cursor: pointer;
-
 	/* Hides the slider so custom styles can be added */
 	background: transparent;
 	border-color: transparent;
@@ -269,7 +250,7 @@ input[type='range']::-webkit-slider-thumb {
 	border-radius: 50%;
 	background: #ffffff;
 	cursor: pointer;
-	margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+	margin-top: -10px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
 	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
 }
 
@@ -285,29 +266,28 @@ input[type='range']::-moz-range-thumb {
     margin-left: 5px;
 }
 
-
+/* Chrome progress bar */
 input[type='range']::-webkit-slider-runnable-track {
 	width: 100%;
-	height: 8.4px;
+	height: 5px;
 	cursor: pointer;
 	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-	background: #3071a9;
+	background: white;
 	border-radius: 1.3px;
 	border: 0.2px solid #010101;
 }
 
 input[type='range']:focus::-webkit-slider-runnable-track {
-	background: #367ebd;
+	background: white;
 }
 
 input[type='range']::-moz-range-track {
 	width: 100%;
-	height: 8.4px;
+	height: 6px;
 	cursor: pointer;
 	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 	background: rgba(255,255,255,0.4);
-	border-radius: 1.3px;
-	border: 0.2px solid #010101;
+	border-radius: 5px;
 }
 
 input[type='range']::-ms-track {
@@ -320,22 +300,22 @@ input[type='range']::-ms-track {
 	color: transparent;
 }
 input[type='range']::-ms-fill-lower {
-	background: #2a6495;
+	background: white;
 	border: 0.2px solid #010101;
 	border-radius: 2.6px;
 	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
 input[type='range']:focus::-ms-fill-lower {
-	background: #3071a9;
+	background: white;
 }
 input[type='range']::-ms-fill-upper {
-	background: #3071a9;
+	background: white;
 	border: 0.2px solid #010101;
 	border-radius: 5px;
 	box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
 }
 input[type='range']:focus::-ms-fill-upper {
-	background: #367ebd;
+	background: white;
 }
 
 
