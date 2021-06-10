@@ -3,7 +3,10 @@
 
 :root {
     --main-clr: #91b3b9;
+    --dash-clr: hsla(0.61,24%, 93%, 0.93);
     --black: hsl(0, 0%, 10%);
+    --psu-blue: hsla(218, 61%, 30%,0.7);
+    --psu-grey: 
     --icon-size: 24px;
 
     /* Box Shadows */
@@ -40,6 +43,7 @@ body{
 h1{
     color: #fff;
     font-size: 3rem;
+    margin-bottom: 1.5rem;
 }
 
 
@@ -151,7 +155,7 @@ video[poster]{
 }
 
 .btn:focus{
-    outline: 1px dashed var(--main-clr);
+    outline: 1px dashed var(--dash-clr);
 }
 
 .controls .play {
@@ -322,7 +326,7 @@ input[type='range']:focus::-ms-fill-upper {
 }
 
 
-/* Play Button */
+/* Overlay Play Button */
 
 .playButton {
     text-align: center;
@@ -396,6 +400,42 @@ input[type='range']:focus::-ms-fill-upper {
       transform: translateX(0)
     }
 }
+
+/* Tooltip Tags above icon */
+
+.tooltip{
+    position: relative;
+}
+
+.tooltip::after{
+    content: attr(data-tooltip-content);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-bottom: 5%;
+    padding: .7em;
+    border-radius: 8px;
+    font-size: 12px;
+    color: #FFFFFF;
+    /* background-color: var(--psu-blue); */
+
+    background: rgba(30,64,123,0.45);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+    backdrop-filter:blur(4px);
+    --webkit-backdrop-filter:blur(4px);
+    border: 1px solid rgba(255,255,255,0.18);
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.54, -0.24, 0.46, 1.28);
+}
+
+.tooltip:hover::after{
+    opacity: 1;
+}
+
+
+
+
 
 /* Nice highlight to a button */
 
