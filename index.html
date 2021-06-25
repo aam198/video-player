@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons"
+      rel="stylesheet">
+
 
 </head>
 <body>
@@ -39,8 +42,16 @@
          <span class="timestamp tooltip" data-tooltip-content="Duration" id="timestamp">00:00</span>
 
          <button class="btn tooltip" data-tooltip-content="CC" id="closedCaption"><i class="fas fa-closed-captioning"></i></button>
+
+         <button class="btn tooltip m-icon maximize" id="video_fullScreen" tabindex="0" data-tooltip-content="Maximize">
+            <span class="m-icon maximize"><svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><rect fill="none" height="24" width="24"/><polygon points="21,11 21,3 13,3 16.29,6.29 6.29,16.29 3,13 3,21 11,21 7.71,17.71 17.71,7.71"/></svg></span>
+        </button>
+
+        
         </div>
         
+        <!-- <div class="transcript-container- drawer"></div> -->
+
     </div>
     <div class="playButton">
         <button class="playBtn" id="overlayPlay">

@@ -6,7 +6,6 @@
     --dash-clr: hsla(0.61,24%, 93%, 0.93);
     --black: hsl(0, 0%, 10%);
     --psu-blue: hsla(218, 61%, 30%,0.7);
-    --psu-grey: 
     --icon-size: 24px;
 
     /* Box Shadows */
@@ -185,6 +184,17 @@ video[poster]{
     color: rgba(255,255,255,0.8);
     font-size: var(--icon-size);
     transition: all .2s ease-in-out;
+}
+
+.controls .maximize {
+    color: rgba(255,255,255,0.8);
+    font-size: var(--icon-size);
+    transition: all .2s ease-in-out;
+}
+
+.controls .maximize:hover {
+    color: rgba(255,255,255,0.9);
+    transform: scale(1.2);
 }
 
 .controls .pause:hover {
