@@ -37,9 +37,12 @@
          </button>
         
          <div class="tooltip" data-tooltip-content="Track">
-         <input type="range" id="progress" class="progress tooltip" min="0" max="100" step="0.1" value="0"/></div>
+         <input type="range" id="progress" class="progress" min="0" max="100" step="0.1" value="0"/></div>
     
          <span class="timestamp tooltip" data-tooltip-content="Duration" id="timestamp">00:00</span>
+        
+         <div class="volume tooltip" data-tooltip-content="Volume">
+         <input type="range" name="volume" class="volume_slider" data-tooltip-content="Volume" min="0" max="1" step="0.05" value="1"></div>
 
          <button class="btn tooltip" data-tooltip-content="CC" id="closedCaption"><i class="fas fa-closed-captioning"></i></button>
 
